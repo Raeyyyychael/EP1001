@@ -1,0 +1,82 @@
+<html>
+    
+ <head>
+     <title>Rachael</title>
+    <link rel="stylesheet" type="text/css" href="stylesheet.css">
+ </head>
+    
+<body>
+      <div id="container">
+       <div id="header">
+           <h1> Electronics Design</h1>
+       </div>
+    
+       <div id="nav">
+           <h3>Navigation</h3>
+           <ul>
+                <li><a class="Home" href="index.html">Introduction</a></li>
+               <li><a href= "Electronics%20production.html">Electronics Production</a></li>
+                <li><a href="Electronics%20design.html">Electronics Design</a></li>
+                <li><a href="Embedded%20programming.html">Electronics Programming</a></li>
+                <li><a href="2D%20CNC.html">2D Computer Controlled Machining</a></li>
+                <li><a href="3D%20CNC.html">3D Machining</a></li>
+                <li><a href="Moulding%20and%20Casting.html">Moulding and Casting</a></li>
+                <li><a href="interface%20prog.html">Interface and Applications Programming</a></li> 
+                <li><a href="IoT.html">Introduction to IoT</a></li>
+                <li><a href="Final%20Project.html">Final Project</a></li>
+           </ul>
+       </div>
+       <div id="main">
+           <h2>What is electronics design?</h2>
+           <p>Electronics design is done before electronics production. We must first design our boards before we can produce them. <br> Electronic design can be done on softwares such as EAGLE which is an autodesk software. I will be using EAGLE for my electronic designs.</p>
+           
+           <h2>Workflow</h2>
+           <ol>
+           <li>Schemetric Entry</li>
+           <li>Board Layout</li>
+           <li>(Auto)routing</li>
+           <li>Simulation (can be done on CAMotics)</li>
+           <li>Fabrication</li>
+           </ol>
+           <h2>Using Eagle </h2>
+           <p>There are several parts that are needed in the Hello World Board. To be honest, it took me more time than I intended just understanding what part does what things. It was really confusing and EAGLE was a confusing software to use as well. </p>
+           <p>Main things I have learnt when designing my own board is that we must first have a microprocesser, the microprocesser is basically the "brain" of the board, storing the memory, programme as well as the pins. Other than that, there are the other peripherals which are different according to what you want the board to do.<br></p>
+           
+           <p>So, using EAGLE. <br> Before starting, we have to add the fab library to the EAGLE library. The fab library is a smaller library with components which are more commonly used in this course. Hence we will use the items from fab library instead of the larger EAGLE library.</p>
+           <img src="Images/electronics%20design%200.png" height="500">
+           
+           <h2>Hello Board</h2>
+           <p>Schemetics of the Hello Board (done with EAGLE)</p>
+           <img src="Images/electronics%20design%201.png" height="500>">
+           
+           <p>Once the schemetics were done, we need to switch to board and layout all of our components nicely. The main objective was to have no crosses and to have everything layed out neatly (route the board). This part was quiet fun, like a messy game of tetris. Probably the most interesting part in using EAGLES for me. <br> There is also a function for auto routing, it does not really give a good layout tho. What I did was to set the thing to auto route once and try to modify it to give a better design.<br> After alot of hard work, my hello board looks like this (the picture below) </p>
+           
+           <p>Layout of the circuit board</p>
+           <img src="Images/electronics%20design%202.png" height="500">
+           
+           <p>PNG of hello board traces</p>
+           <img src="Images/electronics%20design%202.1.png" height="500">
+           
+           <p>PNG of hello board boarder</p>
+           <img src="Images/electronics%20design%202.2.png" height="500">
+           
+           <p>Before milling the board, we have to put it through mods to generate the Gcode. I used the same settings as the ISP, hence the settings can be found in the electronice production page.</p>
+           
+           <p>Similarly, before placing your Gcode into the stepcraft, we can run a simulation of it on CAMotics. It will allow us to see if the file is cutting what we intend to cut out. Once satisfied with it, we can then use the same Gcode on the CNC machine.</p>
+           
+           <p>Milling of circuit board. <br>Do note that the end bit has to be changed when cutting the trace and the board. The bit cutting the mill is slightly bigger as it is cutting a larger area.</p>
+           <img src="Images/electronics%20design%203.png" height="500>">
+           
+           <p>Hello-board after milling</p>
+           <img src="Images/electronics%20design%204.jpeg" height="500">
+           <p>There were several errors after milling the hello world board. From the picture above, you can see that the traces were not clear. This could have occured from using the wrong drill bit, either of wrong size or one which was too blunt. This resulted in the traces to be really thin, hence some parts of the copper were not on the board anymore effectively making it a broken circuit. Hence, I was unable to stuff my PCB. I did not have enough time to make another one.</p>
+           
+           
+       </div>
+     </div>
+     
+     <div id="footer">
+         Copyright &copy; Rachael Cheng
+     </div>
+ </body>
+</html>

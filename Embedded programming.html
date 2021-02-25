@@ -1,0 +1,89 @@
+<html>
+    
+ <head>
+     <title>Rachael</title>
+    <link rel="stylesheet" type="text/css" href="stylesheet.css">
+ </head>
+    
+<body>
+      <div id="container">
+       <div id="header">
+           <h1> Embedded Programming</h1>
+       </div>
+    
+       <div id="nav">
+           <h3>Navigation</h3>
+           <ul>
+                <li><a class="Home" href="index.html">Introduction</a></li>
+               <li><a href= "Electronics%20production.html">Electronics Production</a></li>
+                <li><a href="Electronics%20design.html">Electronics Design</a></li>
+                <li><a href="Embedded%20programming.html">Electronics Programming</a></li>
+                <li><a href="2D%20CNC.html">2D Computer Controlled Machining</a></li>
+                <li><a href="3D%20CNC.html">3D Machining</a></li>
+                <li><a href="Moulding%20and%20Casting.html">Moulding and Casting</a></li>
+                <li><a href="interface%20prog.html">Interface and Applications Programming</a></li> 
+                <li><a href="IoT.html">Introduction to IoT</a></li>
+                <li><a href="Final%20Project.html">Final Project</a></li>
+           </ul>
+       </div>
+       <div id="main">
+          <h2>Understanding Embeded Programming</h2>
+           <p>To keep it short and simple, there are different components that make up your circuit board. <br>First you have your microprocesser(MPU)/microcontroller(MCU) these things act as the 'brain' of the board, it is able to store memory as well as the intended program. Some of them include ATTiny25/45/85.<br> Secondly, there are pherpherals which are the other accessories which are customisable according to the specific needs of that board. Some peripherals include USB, timer and ports. There are many different peripherals.</p>
+           
+           <h2>Programming the Programmer</h2>
+           <p>Pretty ironic right, to have a programmer you need to programme the programmer, [BTW inner thoughts, which programme/program is the right program/programme?]<br>Anyways, going back to electronics production page, we made our FabTinyISP. That is the programmer that we will be programming.</p>
+           
+           <img src="Images/electronics%20prod%206.jpeg" height="500">
+           
+           <h2>Before Starting</h2>
+           <p><b>VERY IMPORTANT</b> install the following softwares before contiueing, ensure that you know where the location of these files are first before starting!!!</p>
+           
+           <ul>
+               <li><a href="https://git-scm.com/download/win">Install Git Bash</a> </li>
+               <li><a href=http://fab.cba.mit.edu/classes/863.16/doc/projects/ftsmin/make-3.81.exe>Install GNUMake</a> </li>
+               <li><a href=http://fab.cba.mit.edu/classes/863.16/doc/projects/ftsmin/avrdude-win-64bit.zip>Install avrdude-win-64bit</a></li>
+               <li><a href=https://www.microchip.com/mplab/avr-support/avr-and-arm-toolchains-c-compilers>Download</a></li>
+               <li><a href=https://zadig.akeo.ie>Zadog</a></li>
+               <li><a href=http://fab.cba.mit.edu/classes/863.16/doc/projects/ftsmin/fts_firmware_bdm_v1.zip>Firmware</a></li>
+           </ul>
+           <p>Once all of them are installed/downloaded. To me I think it is ok to keep it in which ever file you like in your computer as long as you know how and where to locate it.</p>
+           
+           <p>I followed Mr Noels website closely as well as had alot of help from Mr Chew to successfully program my ISP.  <a href=http://fab.academany.org/2020/labs/singapore/students/noel-kristian/exercise04.html>Noel Kristian</a><br> I also referred alot from Brian's Page for the programming of the ISP <a href=http://fab.cba.mit.edu/classes/863.16/doc/projects/ftsmin/windows_avr.html>Brians page</a></p>
+           
+           <h2>Take Note</h2>
+           <p>Open the makefile in the firmware files, ensure that you change the MCU to ATTiny85 instead of 45 for the ISP as the MCU that we are using is ATTiny85.</p>
+           
+           <h2>DUN DUN DUNN the Programming part itself</h2>
+           <img src="Images/electronics%20program%2010.jpeg" height="500">
+           <p>Run Commant Prompt and change the directory to the file which contains youre firmware.(hint hint, if you use windows you can right click the top search car and copy the link)<br> To change directory, type 'cd (file location)'</p>
+           <p>Once it is in type 'make' This will make a hex file and a elf file in the firmware folder. Double check to make sure that it is there in your files</p>
+           <p>Now the board is ready to be programmed, ensure that there is a working programmer (I used Mr Chew's) that is connected to your own programmer. Also ensure that the working programmer is detected by the computer. This can be seen in device manager. Once that is done, open up "Command Prompt" we will use that environment for programming the ISP.</p>
+           <p>Type in 'make flash' this erases your own programmer board and uploads the machine code (.hex) into your programming board. Once that is done you can type in 'avrdude -c usbtiny -p t85' to check to see if the board is working.</p>
+           <p>After that, type in the command 'make fuse' This will configure the fuses your own board according to the machine code. Check that it says 'Thank you' at the end of the long list of words to ensure that the code has passsed.</p>
+           <p>Next you check if your board can be detected by the PC, to do that you plug in your ISP and use device manager to check.</p>
+           <img src="Images/electronics%20program%209.jpeg" height="500">
+           <p>Once everything is in place, the last step is to key in 'make rstdisbl' This is the make reset disable command, making the programmer a fixed programmer and unchangeable.</p>
+           <p>The code is in the pictures below.</p>
+           
+           <img src="Images/electronics%20program%202.png">
+           <img src="Images/electronics%20program%202.png">
+           <img src="Images/electronics%20program%203.png">
+           <img src="Images/electronics%20program%204.png">
+           <img src="Images/electronics%20program%205.png">
+           <img src="Images/electronics%20program%206.png">
+           <img src="Images/electronics%20program%207.png">
+           <img src="Images/electronics%20program%208.png">
+           
+           <h2>My Thoughts</h2>
+           <p>Overall it was quite ok to do, I think I was more lost in where I kept my files as well as many spelling mistakes when I was trying to type in the command prompt which caused me alot of time and confusion. Thank you Mr Chew (again) who helped me alot for this component</p>
+           
+           <h2>Programming my board</h2>
+           <p>The board I will be programming will be my final project board which can be found on my final project page.</p>    
+       </div>
+     </div>
+     
+     <div id="footer">
+         Copyright &copy; Rachael Cheng
+     </div>
+ </body>
+</html>
