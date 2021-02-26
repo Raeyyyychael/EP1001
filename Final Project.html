@@ -1,0 +1,140 @@
+<html>
+    
+ <head>
+     <title>Rachael</title>
+    <link rel="stylesheet" type="text/css" href="stylesheet.css">
+ </head>
+    
+<body>
+      <div id="container">
+       <div id="header">
+           <h1>Final Project</h1>
+       </div>
+    
+       <div id="nav">
+           <h3>Navigation</h3>
+           <ul>
+                <li><a class="Home" href="index.html">Introduction</a></li>
+               <li><a href= "Electronics%20production.html">Electronics Production</a></li>
+                <li><a href="Electronics%20design.html">Electronics Design</a></li>
+                <li><a href="Embedded%20programming.html">Electronics Programming</a></li>
+                <li><a href="2D%20CNC.html">2D Computer Controlled Machining</a></li>
+                <li><a href="3D%20CNC.html">3D Machining</a></li>
+                <li><a href="Moulding%20and%20Casting.html">Moulding and Casting</a></li>
+                <li><a href="interface%20prog.html">Interface and Applications Programming</a></li> 
+                <li><a href="IoT.html">Introduction to IoT</a></li>
+                <li><a href="Final%20Project.html">Final Project</a></li>
+           </ul>
+       </div>
+       <div id="main">
+           <h2>Project Planning</h2>
+           <p>In last semester, I did a lithophane lamp. I really like lithophanes, so i wanted to see how I can incorperate lithophanes into my project this semester.</p>
+           
+           <p>Last semesters final project</p>
+           <img src="Images/fp1.jpg" height="500">
+           
+           <p>My initial plan was to make the exact same thing but to swap out the laser cut box for a large format CNC but it was not feasable. Hence I decided to make a desktop organiser. Below is a sketch of my idea.</p>
+           
+           <img src="Images/fp2.png" height="500">
+           
+           <p>I feel that this project is a good summary of all the skills I have learnt in this whole module as it uses the machines that we have learnt in the last semester in EP1000, so its a nice way to end the module.</p>
+           
+           <h2>Bill of Materials</h2>
+           <ul>
+               <li>3mm Ply wood</li>
+               <li>25mm wood</li>
+               <li>RGB LED</li>
+               <li>Copper board for PCB</li>
+               <li>Dupont Cables</li>
+               <li>ATTiny85 MCU</li>
+               <li>499Ohm Resistors x3</li>
+               <li>1k Ohm Resistor</li>
+               <li>Capacitor</li>
+               <li>4 Pin Header</li>
+           </ul>
+           
+           <h2>3D Printing</h2>
+           <p>3D printing lithophanes are <b>really easy</b> thats why I enjoy printing them hehee. Anyways I played around with some pictures last sem and I really like the image of "The Great Wave off Kanagawa" on the lithophane, so that was the image I decided to use.</p>
+           <p>To generate the lithophane file, we simply put the selected image onto <a href=https://3dp.rocks/lithophane>this website</a>and download the STL file.<br> Once I had the file, I brought it into Ultimaker and slice it (follow the recommended settings). Then proceded to print it on the 3D printer</p>
+           <img src="Images/fp3.jpeg" height="500">
+           <img src="Images/fp4.jpeg" height="500">
+           
+           <h2>Laser Cutting</h2>
+           <p>The laser cutting component was the same as last sem as well. It was a box that could be held together with the 'jig-saw' joints with a hole at the back which is able to fit the LED in. <br>The dimensions of this box is 80x80mm and designed using Fusion360.</p>
+           <img src="Images/fp5.png" height="500">
+           <img src="Images/fp6.jpeg" height="500">
+           <img src="Images/fp7.jpeg" height="500">
+           
+           <h2> Laser Cutting and 3D Print</h2>
+           <img src="Images/fp21.jpeg" height="500">
+           <img src="Images/fp22.jpeg" height="500">
+           
+           <h2>CNC</h2>
+           <p>The CNC component was the whole 'desktop organiser' part. I decided to make it 300x500mm which is quite big in hindsight. Similar to laser cutting, the design was drew out on Fusion360 first before the DXF file was then formatted into a .tap file using the computer attached to the CNC at T11C. </p>
+           
+           <img src="Images/fp8.png" height="500">
+           <p>The idea was to have 2 pockets which are milled into the surface (not through!) But by doing so I needed to use a wood of thicker dimension so that there is enough space left. Hence the full dimensions of my desktop organiser was 300x500x25mm. The pockets are 18mm deep.</p>
+           <p>Since we are using the CNC, I had to round the edges since the CNC is unable to cut sharp edges(drill bit is round)</p>
+           
+           <p>I used the large format CNC at T11C to cut out my desktop organiser. <b>IMPORTANT, take note that there must be someone with you when you are using the CNC as it is a large machine so for safety reasons no using it on your own</b> and for students only operate it under the supervision of the teachers who are trained.</p>
+           <p>Mr Chew helped with preparing the file for the CNC, but to do so, we first have the saved DXF file from Fusion that is brought onto the comoputer at the CNC, over there it is then opened on the software there. On it we are to selecte the different surfaces and key in the different diemnsions that we want to cut to also add tabs so that the thing dont fly out when cutting.</p>
+           <p>Remember to properly set the x, y, x axis as well as turn on the vacuum before starting the cut.</p>
+           <img src="Images/fp9.jpeg" height="500">
+           
+           <p>After cutting, we had to lift the whole piece of wood to 'hammer' out the piece as it was tabbed onto the big piece of wood. It was also really 'hairy' on the edges, so I used the sanding machine to help get rid of it and smoothen the edge.</p>
+           
+           <p>Before</p>
+           <img src="Images/fp10.jpeg" height="500">
+           <p>After</p>
+           <img src="Images/fp11.jpeg" height="500">
+           
+           <h2>Electronics Production</h2>
+           <p>Starting the board. My board has a really simple function, it consists of a RGB LED and a push button switch. <br> The RGB LED requires 3 pins while the push button requires 1. I deicded to use the ATTiny85 for the board was there were enough pins as well as memory for the project I want to do.</p>
+           
+           <p>Board Schemetics</p>
+           <img src="Images/fp12.png" height="500">
+           
+           <p>As seen from the schemetics, the board only consists of a 4pins header which will be used to connect the RGB LED externally and a push button switch. </p>
+           
+           <P>Board Traces</P>
+           <img src="Images/fp13.png" height="500">
+        
+           <p>Once we have the PNG file for the traces and outlines, we can then generate the Gcode using mods. (refere to electronics production for mods setting)</p>
+           
+           <img src="Images/fp14.jpeg" height="500">
+        
+           <p>Once the board had been cut out, I then had to solder the components onto the board. The parts can be refered on the schemetics. Sadly I dont have pictures of when I was soldering but this is the done outcome</p>
+           
+           <img src="Images/fp15.jpeg" height="500">
+           <p>There are 2 yellow wires there, they were added because I forgot to connect the VCC and Ground from my chip to my connector thing in my schemetics. So they are there to kind make a connection to the 2 pins.</p>
+           
+           <p>That covers up the portion for my production of the board. </p>
+           
+           <h2>Electronics Programming</h2>
+           <p>The plan for my project was similar to my previous project. I wanted a RGB LED to change colour, but this time a push button switch is added so that everytime it is pressed it will change colour. </p>
+           
+           <p>Arduino Code<br> Take note of the delay timing between each mode, it is like a little pause before it switches to the next colour. This program is so that the RGB LED will turn on as well as change colour everytime the push button switch is pressed. It has a cycle of 8 colours and once that cycle is finished the LED will turn off.<br>Below is the code </p>
+           
+           <img src="Images/fp16.png" height="500">
+           <img src="Images/fp17.png" height="500">
+           <img src="Images/fp18.png" height="500">
+           
+           <h2>Overall</h2>
+           <img src="Images/fp19.jpeg" height="500">
+           <p>The final product looks like the picture above. The large pocket in will be able to hold your stationary as well as tiny things, It has a really large space and it is quiet deep in as well. Where as the smaller pocket is used to place the circuit board inside and the light above it. </p>
+           
+           <h2>Presentation Slide</h2>
+           <img src="Images/fp20.png" height="500">
+           
+           <h2>Presentation Video</h2>
+           <a href="https://photos.app.goo.gl/mAose8AZNAnorLjN8">Llink to video</a>
+           
+           
+       </div>
+     </div>
+     
+     <div id="footer">
+         Copyright &copy; Rachael Cheng
+     </div>
+ </body>
+</html>
